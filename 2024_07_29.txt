@@ -1,0 +1,73 @@
+-- 2024.07.29(월)
+
+-- 테이블 목록
+select * from tab;
+-- DEPT : 부서 테이블
+-- EMP : 사원 테이블
+-- BONUS : 상여금
+-- SALGRADE : 급여등급
+
+-- DEPT 테이블 구조
+describe dept;
+desc dept;
+
+-- dept 테이터 검색 : SQL문은 대.소문자를 구분하지 않는다.
+select * from dept;
+SELECT * FROM DEPT;
+
+-- EMP 테이블 구조
+desc emp;
+
+-- EMP 테이블 데이터 검색
+select * from emp;
+
+-- 오라클의 데이터 타입
+--1.숫자 데이터
+-- number(n)
+--  ex) number(2) : 정수 2자리까지 저장
+-- number(n1, n2) : n1 - 전체 자리수
+--                  n2 - 소숫점에 할당된 자리수
+-- ex)number(7, 2) : 전체 자리수 7자리, 소숫점에 2자리 할당
+
+--2.문자 데이터
+-- char() :  고정 길이 문자형
+--           최대 2000 byte 까지 저장 가능함.
+-- varchar2() : 가변 길이 문자형
+--              최대 4000 byte 까지 저장 가능함.
+-- long : 2GB 까지 저장 가능함.
+--        long 형으로 설정된 컬럼은 검색 기능을 지원하지 않는다.        
+ 
+--3.날짜 데이터
+-- date : 연/월/일 정보 저장
+-- timestamp : 연/월/일 시:분:초 정보 저장
+
+-- select sql문
+select * from dept;
+
+select loc, dname, deptno from dept;
+
+select * from emp;
+
+select empno, ename, sal from emp;
+
+-- 산술 연산자 : +, -, *, /
+select sal + comm from emp;
+select sal + 100 from emp;
+select sal - 100 from emp;
+select sal * 100 from emp;
+select sal / 100 from emp;
+
+--Q.사원테이블(EMP)에 소속된 사원들의 연봉을 구해보자?
+--  연봉 = 급여(SAL) * 12 + 커미션(COMM)
+
+
+
+
+
+
+
+
+
+
+
+
